@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    ชื่อ : <input  
+    id="fname"  
+    class="input"
+    type="text" 
+    name="fname" 
+    value="ชื่อทดสอบ" >
+    
+    นามสกุล : <input
+    id="lname"
+    class="input"
+    type="text"
+    name="lname"
+    value="นามสกุลทดสอบ">
+
+<br>
+    
+
+    เบอร์ :<input
+    id="tel"
+    class="input"
+    type="text"
+    name="phone"
+    value="0123456">
+     
+<br>
+<br>
+
+    งานอดิเรก :
+    <input type="checkbox" name="fname" value="ฟุตบอล"> ฟุตบอล
+    <input type="checkbox" name="fname" value="บาสเกตบอล"> บาสเกตบอล
+    <input type="checkbox" name="fname" value="ว่ายน้ำ"> ว่ายน้ำ
+<br>
+<br>
+
+    <button onclick="userclick()">Click ME</button>
+    <div onclick="divclick()">Click div</div>
+-->   
+<br>
+    <input type="radio" name="gender" value="male"  onchange="changeGender() ">male
+    <input type="radio" name="gender" value="female">female
+    
+
+
+<script>
+
+     /*
+    function userclick(){
+        console.log("Button was Click! ")
+    }
+    function divclick(){
+        console.log("Div was Click! ")
+    }
+
+    
+          
+    let fnameInput = document.getElementById('fname');
+    console.log(fnameInput.value); 
+    
+    let lnameInput = document.getElementBylastname('lname');
+    console.log(lnameInput.value);
+   
+    let inputs = document.getElementsByClassName('input');
+    console.log(inputs.length);
+    for (let i =0; i<inputs.length; i++){
+        console.log(inputs[i].values);
+    }
+     
+    let inputs = document.querySelector('input[name="fname"]');
+    console.log(inputs.value);
+
+
+    let checkboxs = document.querySelector('input[type="checkbox"]');
+    console.log(checkboxs);
+    for (let i = 0; i < checkboxs.length; i++ ){
+        console.log(checkboxs[i].value );
+    }
+
+    function changeGender(){
+        console.log("Gender changed");
+    }
+ */
+    function changeGender(){
+        console.log("Gender changed");
+        let gender = document.querySelectorAll('input[name="gender"]');
+        
+        for(let i =0; i < gender.length; i++){
+            if(gender[i].check){
+                console.log("Gender selected: " + gender[i].value);
+            }
+        }
+    }
+ 
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
