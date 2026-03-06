@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2/promise');
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -13,7 +16,7 @@ const initMySQL = async () => {
         host: 'localhost',
         user: 'root',
         password: 'root',
-        database: 'wabdb',
+        database: 'webdb',
         port: 8700
     });
     console.log('Connected to MySQL database');
@@ -27,11 +30,11 @@ app.get('/users', async (req, res) => {
 app.post('/users', async (req, res) => {
     try {
     let user = req.body;
-    const resuly = await conn.query('INSERT INTO users SET ?', user);
+    const results = await conn.query('INSERT INTO users SET ?', user);
     console.log('results:', results);
     res.json({
         Message: 'User added successfully',
-        data: resuly[0]
+        data: results[0]
     });
     } catch (error) {
         console.error('Error inserting user:', error);
