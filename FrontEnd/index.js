@@ -1,3 +1,4 @@
+
 const validateData = (userData) => {
     let errors = [];
     if (!userData.firstname) {
@@ -50,7 +51,7 @@ console.log('submitData', userData)
 const errors = validateData(userData);
 if (errors.length > 0) {
     throw {
-        message: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+       message: 'กรุณากรอกข้อมูลให้ครบถ้วน',
         errors: errors
     }
 }
@@ -62,9 +63,16 @@ messageDOM.className = 'message success';
 } catch (error) {
     console.log('Error message', error.message);
     console.log('Error details', error.errors);
-//    if (error.response) {
-//        console.error('Error response:', error.response.data.message);
-//    }    
+
+   if (error.response) {
+       console.error('Error response:', error.response);
+        error.message = error.response.data.message;
+        error.errors = error.response.data.errors;
+    
+   }    
+
+   
+
 let htmlData = '<div>';
 htmlData += `<div>${error.message}</div>`;
 htmlData += '<ul>';
