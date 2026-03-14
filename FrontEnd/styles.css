@@ -2,19 +2,32 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(247, 243, 238);
+    font-family: Cursive ;
+    background-color: rgb(194, 194, 194);
 
 }
+.signin {
+    display: inline-flex;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4aeb2a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
 
+
+
+ 
 /* กล่องฟอร์มหลัก */
 .container {
     width: 400px;
-    background-color: hsl(44, 45%, 90%);
+    background-color: hsl(0, 0%, 100%);
     margin: 50px auto;
     padding: 20px 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 /* หัวข้อฟอร์ม */
@@ -24,6 +37,8 @@ body {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+    
+   
 }
 
 /* flex ใช้ร่วมกัน */
@@ -84,17 +99,19 @@ textarea:focus {
 .center {
     text-align: center;
     margin-top: 20px;
+    
 }
 
 /* ปุ่ม */
 .button {
     background-color: #4CAF50;
-    color: #fff;
+    color: #ecdfdf;
     border: none;
     padding: 10px 25px;
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
+    
 }
 
 .button:hover {
@@ -118,3 +135,4 @@ textarea:focus {
     background-color: rgb(245, 70, 70);
     display: block;
 }
+
